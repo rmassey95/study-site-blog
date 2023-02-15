@@ -1,10 +1,17 @@
 import Navbar from "./navbar";
+import Folder from "../interfaces/folder";
 
-const Layout = () => {
+type Props = {
+  preview?: boolean;
+  children: React.ReactNode;
+  allFolders: Folder[];
+};
+
+const Layout = ({ preview, children, allFolders }: Props) => {
   return (
     <div>
-      <Navbar />
-      Layout
+      <Navbar allFolders={allFolders} />
+      <main>{children}</main>
     </div>
   );
 };
