@@ -16,7 +16,7 @@ export function getFolderContentBySlug(slug: string, folderDirectory: string) {
   return items;
 }
 
-export function getFolderData(dest: string) {
+export function getFolderData() {
   const folderDirectory = join(process.cwd(), "_data");
 
   const slugs = fs.readdirSync(folderDirectory);

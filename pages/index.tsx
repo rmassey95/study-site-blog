@@ -36,6 +36,6 @@ export default function Index({ allFolders }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allFolders = getFolderData("_data");
+  const allFolders = getFolderData();
   return { props: { allFolders } };
 };

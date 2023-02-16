@@ -6,7 +6,7 @@ export function getNoteSlugs(notesDirectory: string) {
   return fs.readdirSync(notesDirectory);
 }
 
-export function getNotesBySlug(
+export function getNoteBySlug(
   slug: string,
   folderDirectory: string,
   fields: string[] = []
@@ -39,7 +39,7 @@ export function getAllNotes(folderName: string, fields: string[] = []) {
   const notesDirectory = join(process.cwd(), `_data/${folderName}`);
   const slugs = getNoteSlugs(notesDirectory);
   const notes = slugs.map((slug) =>
-    getNotesBySlug(slug, notesDirectory, fields)
+    getNoteBySlug(slug, notesDirectory, fields)
   );
 
   return notes;
