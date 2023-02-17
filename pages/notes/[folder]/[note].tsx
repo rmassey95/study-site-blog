@@ -64,8 +64,8 @@ export async function getStaticProps({ params }: Params) {
 
 export async function getStaticPaths() {
   const allNotes = [];
-  const folders = ["programming", "hardware", "finance"];
-  for (let i = 0; i < 3; i++) {
+  const folders = ["programming", "hardware"];
+  for (let i = 0; i < 2; i++) {
     allNotes.push(getAllNotes(folders[i], ["title", "folder"]));
   }
   const paramNotes = [];

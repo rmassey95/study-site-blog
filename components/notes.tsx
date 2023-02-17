@@ -1,4 +1,5 @@
 import Link from "next/link";
+import uniqid from "uniqid";
 
 const Notes = ({ allNotes }) => {
   return (
@@ -8,7 +9,7 @@ const Notes = ({ allNotes }) => {
       </h2>
       {allNotes.map((note) => {
         return (
-          <div className="mt-4">
+          <div key={uniqid()} className="mt-4">
             <Link
               className="rounded-lg px-3 py-2 hover:bg-slate-200 hover:text-slate-900 bg-slate-50"
               href={`/notes/${note.folder.toLowerCase()}/${note.title.toLowerCase()}`}
