@@ -50,7 +50,7 @@ export async function getStaticPaths() {
     paths: [
       { params: { folderName: "programming" } },
       { params: { folderName: "hardware" } },
-      { params: { folderName: "finance" } },
+      { params: { folderName: "cs" } },
     ],
     fallback: false,
   };

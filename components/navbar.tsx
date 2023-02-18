@@ -28,7 +28,7 @@ const Navbar = ({ allFolders }) => {
               return (
                 <Link
                   key={uniqid()}
-                  href={`/folder/${folder.data.title.toLowerCase()}`}
+                  href={`/folder/${folder.data.folder}`}
                   className="rounded-lg px-2 py-1 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
                 >
                   {folder.data.title}

@@ -25,6 +25,7 @@ export default function Index({ allFolders }: Props) {
               <FolderInfo
                 key={uniqid()}
                 title={folder.data.title}
+                folder={folder.data.folder}
                 desc={folder.content}
               />
             );

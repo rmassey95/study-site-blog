@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-const Homepage = ({ title, desc }) => {
+const Homepage = ({ title, folder, desc }) => {
   return (
     <div className="mt-4">
       <Link
         className="rounded-lg px-3 py-2 hover:bg-slate-200 hover:text-slate-900 bg-slate-50"
-        href={`/folder/${title.toLowerCase()}`}
+        href={`/folder/${folder}`}
       >
         {title}
       </Link>

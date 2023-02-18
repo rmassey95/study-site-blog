@@ -1,6 +1,7 @@
 type FolderType = {
   data: {
     title: string;
+    folder: string;
   };
   content: string;
 };
