@@ -76,6 +76,12 @@ To remove a folder from being tracked in your git repository you should first be
 `git rm -r --cached path_to_your_folder/`
 Now when you commit the changes, the folder that you specified above will no longer be tracked in your git repository.
 
+## Deploying a subfolder to GitHub pages
+
+Use the `git subtree push` command to push a certain folder to another branch on GitHub. This is useful when you are making an app run on GitHub Pages. The root directory being another directory other than `./`. For example:
+`git subtree push --prefix dist origin gh-pages`
+This willl push a subtree to `origin` which will only contain the contents of the folder `dist` on a new branch called `gh-pages`.
+
 ## Git
 
 `Git` is a version control system that creates snapshots of your work which allow you to return back to if needed. Provides a detailed history of your project, what features/work was done at what time, allows you to checkout this work and allows for relatively easy collaboration. You can think of it like saving a word document, except anytime you save the document, instead of that document being overwritter, a new snapshot of that word document is created. You can then view the different snapshots (saves) which holds different information. You can then collaborate with others by creating a copy of that word document on your computer, adding your changes and then pushing those changes back up to the main save without effecting anyone elses work on the main document.
