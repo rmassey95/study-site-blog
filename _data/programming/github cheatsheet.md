@@ -70,6 +70,12 @@ The `git branch` command will list all the branches in your repo. To create a ne
 - `--soft` - doesn't touch the index or the work tree. All files are intact and changes show up as 'changes to be committed' with `git status`. Useful when you've made some bad commits but the work is good.
 - `--merge` - resets the index (like `--mixed`) and resets the files affected by a merge. Restores everything to how it was before a merge. Useful when you have made a bad merge.
 
+## Git rm
+
+To remove a folder from being tracked in your git repository you should first be sure to add it to your `.gitignore` file and next, type the following command:  
+`git rm -r --cached path_to_your_folder/`
+Now when you commit the changes, the folder that you specified above will no longer be tracked in your git repository.
+
 ## Git
 
 `Git` is a version control system that creates snapshots of your work which allow you to return back to if needed. Provides a detailed history of your project, what features/work was done at what time, allows you to checkout this work and allows for relatively easy collaboration. You can think of it like saving a word document, except anytime you save the document, instead of that document being overwritter, a new snapshot of that word document is created. You can then view the different snapshots (saves) which holds different information. You can then collaborate with others by creating a copy of that word document on your computer, adding your changes and then pushing those changes back up to the main save without effecting anyone elses work on the main document.
